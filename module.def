@@ -54,42 +54,6 @@ class User						< uuid b2af3521-805d-49f1-95b8-720ffde5383b
 								
 
 # ----------------------------------------------------------------------------
-class OpenCORE:Quota			< uuid 34789832-e1bd-441d-9ffc-193c6364b9d7
-								< version 1
-								< requires User
-								< indexing manual
-								< uniquein parent
-								< shortname quota
-								< title Quota
-								< description Quota information
-								< sortindex 20
-								< gridheight 275
-								
-								< capabilities update
-	
-	string id					: Resource
-								< flags visible
-								< gridhide true
-								
-	string description			: Description
-								< flags visible
-								< gridwidth 41
-								
-	string units				: Unit 
-								< flags visible
-								< gridwidth 13
-								
-	integer usage				: Usage
-								< flags visible
-								< gridwidth 7
-								
-	integer quota				: Quota
-								< flags enabled visible
-								< gridwidth 7
-								< textwidth 3
-	
-
-# ----------------------------------------------------------------------------
 class OpenCORE:System			< uuid f5ab1775-56a3-42d2-9853-7fdc13709003
 								< version 1
 								< indexing manual
@@ -107,56 +71,6 @@ class OpenCORE:System			< uuid f5ab1775-56a3-42d2-9853-7fdc13709003
 	string grace				: Grace library version < flags visible
 	
 								
-# ----------------------------------------------------------------------------
-class OpenCORE:Prefs			< uuid f0323afe-4ca6-4625-a9a5-2c679cc44e9d
-								< version 2
-								< indexing manual
-								< singleton prefs
-								< shortname prefs
-								< title Preferences
-								< description System Preferences
-								< sortindex 250
-								< icon prefs.png
-								
-								< capabilities admin update
-								
-	string id					: id < flags required
-	
-	string mailcontact			: Contact E-mail
-								< example steve@example.com
-								< textwidth 30
-								< regexp [:email:]
-	
-	string smtphost				: SMTP Server
-								< example 127.0.0.1
-								< textwidth 16
-								< regexp [:ipaddress:]
-	
-	bool sendalerts				: Send SMTP alert messages
-
-
-# ----------------------------------------------------------------------------
-class OpenCORE:Wallpaper		< uuid 70ae0843-ba29-48bd-b6f5-9784f4cc38f1
-								< version 1
-								< indexing manual
-								< uniquein parent
-								< dynamic true
-								< shortname wallpaper
-								< title Wallpaper
-								< description GUI Wallpaper
-								< sortindex 300
-								< emptytext No wallpapers available
-								< requires OpenCORE:Prefs
-								< gridheight 234
-								
-								< capabilities admin update
-								< required active
-								
-	string id					: Name < gridwidth 20
-	string description			: Description < gridwidth 40
-	image preview				: Preview < gridhide true
-	bool active					: Use < gridwidth 8
-	
 # ----------------------------------------------------------------------------
 class OpenCORE:ActiveSession	< uuid 37b77a2a-fe61-4d37-a604-ee003512111e
 								< version 1
