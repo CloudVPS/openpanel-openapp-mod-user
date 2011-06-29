@@ -1,0 +1,24 @@
+#!/bin/bash
+. /var/openpanel/api/sh/module.sh
+
+User.update() {
+  userid=$(coreval User id)
+  newpass=$(coreval User password)
+  authd setuserpass "${userid}" "${newpass}"
+}
+
+Module.getconfig() {
+  cat << _EOF_
+  <openpanel.module>
+    <dict id="User" type="class">
+      <dict id="openpanel-admin">
+	    <string id="password">*</string>
+            <string id="emailaddress">admin@example.com</string>
+      </dict>
+    </dict>
+  </openpanel.module>
+_EOF_
+  exitquiet
+}
+
+implement OpenAppUser.module
