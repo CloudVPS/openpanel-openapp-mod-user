@@ -9,6 +9,7 @@ Package: openpanel-openapp-mod-user
 Architecture: any
 Pre-Depends: openpanel-core, openpanel-authd
 Depends: openpanel-core (>= 0.8.3), openpanel-coreval, openpanel-api-sh, ${shlibs:Depends}, ${misc:Depends}
+Recommends: openpanel-openapp-gui
 Provides: openpanel-mod-user
 Conflicts: openpanel-mod-user
 Description: OpenPanel module to manage the OpenApp admin user
