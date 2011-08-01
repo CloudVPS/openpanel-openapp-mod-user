@@ -47,11 +47,6 @@ class User						< uuid b2af3521-805d-49f1-95b8-720ffde5383b
 								< example sPswd13t
 								< regexp [:password:]
 								
-	string emailaddress			: Email address
-								< regexp [:email:]
-								< textwidth 45
-								< example john@acme.example.net
-								
 # ----------------------------------------------------------------------------
 class OpenCORE:Quota                    < uuid 34789832-e1bd-441d-9ffc-193c6364b9d7
                                                                 < version 1
