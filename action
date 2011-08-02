@@ -13,7 +13,6 @@ Module.getconfig() {
     <dict id="User" type="class">
       <dict id="openpanel-admin">
 	    <string id="password">*</string>
-            <string id="emailaddress">admin@example.com</string>
       </dict>
     </dict>
   </openpanel.module>
