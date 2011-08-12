@@ -28,7 +28,7 @@ class User						< uuid b2af3521-805d-49f1-95b8-720ffde5383b
 								< uniquein class
 								< shortname user
 								< singleton openpanel-admin
-								< title User
+								< title OpenApp admin
 								< description System/OpenPanel user
 								< sortindex 10
 								< icon user.png
@@ -37,11 +37,11 @@ class User						< uuid b2af3521-805d-49f1-95b8-720ffde5383b
 								< listview id emailaddress
 								< required id password emailaddress
 
-	string id					: Username
+	string id					: OpenApp Username
 								< example openpanel-admin
 								< textwidth 16
 								
-	password password			: Password
+	password password			: OpenApp Password
 								< crypt md5
 								< textwidth 16
 								< example sPswd13t
