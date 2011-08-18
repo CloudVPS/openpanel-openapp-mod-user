@@ -58,6 +58,7 @@ class OpenCORE:Quota                    < uuid 34789832-e1bd-441d-9ffc-193c6364b
                                                                 < description Quota information
                                                                 < sortindex 20
                                                                 < gridheight 275
+								< guihide true
                                                                 
                                                                 < capabilities update
         
