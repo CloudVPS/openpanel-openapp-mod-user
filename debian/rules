@@ -21,6 +21,7 @@ install:
 
 build:
 	mkmodulexml < module.def > module.xml
+	convert -modulate 50,100,100 user.png down_user.png
 binary-indep:
 
 binary-arch binary: build install
