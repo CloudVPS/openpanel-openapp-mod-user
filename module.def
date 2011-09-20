@@ -10,8 +10,8 @@
 #
 # OpenPanel OpenAppUser.module for user management
 # ============================================================================
-module OpenAppUser					< uuid 2dd1a7b4-c37d-423c-a0a3-90f3a8f78601
-								< version 1.0
+module OpenAppUser              < uuid 2dd1a7b4-c37d-423c-a0a3-90f3a8f78601
+								< version 2.0
 								< languages en_EN
 								< apitype commandline
 								< getconfig true

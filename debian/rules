@@ -15,6 +15,7 @@ install:
 	rm -rf ${BUILD_ROOT}
 	mkdir -p ${BUILD_ROOT}/var/openpanel/modules/OpenAppUser.module
 	install -m 755 action ${BUILD_ROOT}/var/openpanel/modules/OpenAppUser.module/action
+	install -m 755 updateok ${BUILD_ROOT}/var/openpanel/modules/OpenAppUser.module/updateok
 	cp module.xml ${BUILD_ROOT}/var/openpanel/modules/OpenAppUser.module/module.xml
 	cp *.png ${BUILD_ROOT}/var/openpanel/modules/OpenAppUser.module/
 	cp mod_user.html ${BUILD_ROOT}/var/openpanel/modules/OpenAppUser.module/
