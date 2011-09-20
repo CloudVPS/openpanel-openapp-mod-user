@@ -5,6 +5,9 @@ User.update() {
   userid=$(coreval User id)
   newpass=$(coreval User password)
   authd setuserpass "${userid}" "${newpass}"
+
+  ftp_enabled=$(coreval User enable_ftp)
+  [ "${ftp_enabled}" = "true" ] && authd runscript openapp-enable_ftp || authd runscript openapp-disable_ftp
 }
 
 Module.getconfig() {

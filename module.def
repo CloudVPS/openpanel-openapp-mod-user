@@ -32,6 +32,7 @@ class User						< uuid b2af3521-805d-49f1-95b8-720ffde5383b
 								< description System/OpenPanel user
 								< sortindex 10
 								< icon user.png
+                                < explanation mod_user.html
 							
 								< capabilities update
 								< listview id emailaddress
@@ -46,6 +47,11 @@ class User						< uuid b2af3521-805d-49f1-95b8-720ffde5383b
 								< textwidth 16
 								< example sPswd13t
 								< regexp [:password:]
+
+    bool enable_ftp             : Enable FTP Access
+                                < gridhide true
+                                < default false
+
 								
 # ----------------------------------------------------------------------------
 class OpenCORE:Quota                    < uuid 34789832-e1bd-441d-9ffc-193c6364b9d7
@@ -88,3 +94,8 @@ class OpenCORE:Quota                    < uuid 34789832-e1bd-441d-9ffc-193c6364b
 # ============================================================================
 authd commandclasses
 	commandclass user
+
+authd scripts
+    script openapp-enable_ftp
+    script openapp-disable_ftp
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## This script disables FTP on OpenApp
+
+if [ ! -x /usr/sbin/openapp-pureftpd-auth ]; then
+    exit 0
+else
+    /usr/sbin/invoke-rc.d pure-ftpd stop > /dev/null
+    /usr/sbin/update-rc.d pure-ftpd remove > /dev/null
+fi
+
+exit 0
