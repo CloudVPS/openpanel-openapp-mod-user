@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 5), openpanel-dev, imagemagick
 Standards-Version: 3.7.2
 
 Package: openpanel-openapp-mod-user
-Architecture: any
+Architecture: all
 Pre-Depends: openpanel-core, openpanel-authd
 Depends: openpanel-core (>= 1.1.2), openpanel-coreval, openpanel-api-sh, ${shlibs:Depends}, ${misc:Depends}
 Recommends: openpanel-openapp-gui
