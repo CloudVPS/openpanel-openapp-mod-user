@@ -31,6 +31,9 @@ case "$1" in
         mkdir -p /var/openpanel/conf/staging/OpenAppUser
         chown openpanel-core:openpanel-authd /var/openpanel/conf/staging/OpenAppUser
         invoke-rc.d openpanel-core reload
+
+        # redirect openapp users to the openapp component
+        find /etc/apt -type f -exec sed -i '/download.openpanel.com\/deb/ { /openapp/ b; s/$/ openapp/ }' {} \;
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
